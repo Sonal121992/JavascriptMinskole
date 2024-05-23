@@ -1,3 +1,7 @@
+//19th Feb 2024 // 23rd Feb 2024 // 
+
+// script9.js and script11.js and script11b.js 1
+
 // Array Methods
 
 //                1     2           3       4       5       6       =====> length
@@ -213,5 +217,70 @@ console.log(num3.slice(-2,2))// []
 console.log(num3.slice(5,-6)) // []
 console.log(num3.slice(4,-5)) // []
 
+
+console.log("=============")
+
+// splice() ===> splice(index, noOfeleToBeDeleted)
+
+//                0         1         2        3         4         5         6           7          8
+let cities = ["nagpur", "rourkela", "pune", "bhopal", "indore", "mumbai", "chennai", "bangalore", "manipal"]
+//              -9         -8         -7       -6        -5        -4        -3          -2         -1
+
+console.log(cities.splice(5,1)) // ['mumbai']
+console.log(cities) // it will gives us array without mumbai in it
+console.log(cities.splice(4,3)) //[ 'indore', 'chennai', 'bangalore' ] ====> from index 4 ,,,,3 element to remove
+console.log(cities) //[ 'nagpur', 'rourkela', 'pune', 'bhopal', 'manipal' ]
+
+console.log("=================")
+
+// fill()
+// fill('characterToInsert', startIndex, EndIndex(Not included))
+
+//           0  1  2  3  4  5  6  7  8
+let num4 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+let a24 = num4.fill('@',2,4)
+console.log(a24) // [1, 2, @, @, 5, 6, 7, 8, 9]
+
+let a25 = num4.fill('$',5,8)
+console.log(a25) // [1, 2, @, @, 5, $, $, $, 9]
+
+
+// flat() =====> the inner arrays will get collapes
+
+//                          0                       1                       2
+//                0         1       2       0       1           2           0       1
+let states = [["nagpur","pune","nashik"],["bhopal","gwalior","indore"],["pushkar","jaipur"]]
+console.log(states[0][2]) //nashik
+console.log(states[1][1]) //gwalior
+console.log(states[2][0]) //pushkar
+console.log(states[0][3]) //undefined ====> since we provide 
+// let a26 = states.flat()
+// console.log(a26) //["nagpur","pune","nashik","bhopal","gwalior","indore","pushkar","jaipur"]
+
+// sort() 
+
+let country = ["India","America","China","Nepal", "Srilanka","Bangladesh","Bhutan","Thailand"]
+console.log(country.sort()) // Sort everything in ascending order
+//['America','Bangladesh','Bhutan','China','India','Nepal','Srilanka','Thailand']
+
+// join()
+
+let info = ["sonal", "lambat", "8668280134"]
+console.log(info.length) //3
+a26 = info.join('-') // sonal-lambat-8668280134
+console.log(a26)
+console.log(typeof a26) // string
+
+
+// lang, framework, focus, exp ====> Concat()
+
+let n = [22,33,44]
+n.reverse()
+console.log(n)
+ 
+let t1 = [22,33,44]
+let t2 = [55,66,77]
+let t3 = t1.concat(t2)
+console.log(t3) // [22,33,44,55,66,77]
 
 // node 9-ArrayMethods.js

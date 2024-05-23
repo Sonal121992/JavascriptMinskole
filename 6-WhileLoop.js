@@ -1,3 +1,8 @@
+// 15th Feb 2024
+
+// script7.js
+
+
 // initialization
 //while(condition){
 //    statement
